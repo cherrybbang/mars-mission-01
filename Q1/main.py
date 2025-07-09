@@ -12,14 +12,24 @@ try:
       header = next(reader)
       rows = list(reader)
 
+      # 화면출력
+      print("[mission_computer_main.log 출력하기]")
+      for row in rows:
+          print(row)
+
       # 시간역순으로 정렬
       rows.sort(key=lambda x: x[0], reverse=True)
 
+      # 첫 7개의 항목만 처리
+      rows = rows[:3]
+
       # 마크다운으로 저장
       with open(output_file, 'w', encoding='utf-8') as md_file:
-        md_file.write('[log_analysis 보고서]\n\n')
+        md_file.write('# log_analysis 보고서\n\n')
+        md_file.write('| Timestamp           | Event                     | Message                                   |\n')
+        md_file.write('|---------------------|---------------------------|-------------------------------------------|\n')
         for row in rows:
-              md_file.write(f'| {row[0]} | {row[1]} | {row[2]}\n')
+            md_file.write(f'| {row[0]} | {row[1]} | {row[2]} |\n')
 
       print(f'{output_file} 파일이 생성되었습니다.')
 
