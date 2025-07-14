@@ -1,4 +1,4 @@
-## [Python 프로젝트 실행하는 법]
+## [Python 프로젝트 실행하기]
 
 ### 1. git clone & 프로젝트 폴더 이동
 ### 2. python -m venv venv 가상환경 생성
