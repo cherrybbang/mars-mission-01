@@ -1,4 +1,3 @@
 {
-  "editor.defaultFormatter": "yapf",
   "editor.formatOnSave": true
 }

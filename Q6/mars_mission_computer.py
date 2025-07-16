@@ -1,6 +1,5 @@
 import random
 
-
 class DummySensor:
     def __init__(self):
         self.env_values = {
