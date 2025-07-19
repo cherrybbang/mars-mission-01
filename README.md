@@ -6,6 +6,6 @@
 
 ### 3. venv 활성화 : venv\Scripts\activate
 
-### 4. 패키지 설치 : pip install -r requiremenrs.txt
+### 4. 패키지 설치 : pip install -r requirements.txt
 
 ### 5. deactivate : 가상환경 비활성화

@@ -36,11 +36,26 @@ class MissionComputer:
             "operation_system": platform.system(),
             "operation_system_version": platform.version(),
             "cpu_type": platform.processor(),
-            "cpu_core_amount": 0,
-            "memory_size": 0,
+            "cpu_core_amount": psutil.cpu_count(logical=True),
+            "memory_size": round(psutil.virtual_memory().total / (1024**3), 2),
         }
 
         print(json.dumps(computer_info, indent=2))
+
+    def get_mission_computer_load(self):
+        load_info = {
+            "cpu_usage": psutil.cpu_percent(interval=1),
+            "memory_usage": psutil.virtual_memory().percent,
+        }
+
+        print(json.dumps(load_info, indent=2))
+
+
+runComputer = MissionComputer()
+
+if __name__ == "__main__":
+    runComputer.get_mission_computer_info()
+    runComputer.get_mission_computer_load()
 
 
 # platform 모듈은 운영체제의 이름, 버전 등 시스템 정보를 얻을 수 있다. 아래와 같이 platform 모듈을 사용하는 주요함수가 있다.
