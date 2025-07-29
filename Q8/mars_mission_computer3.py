@@ -58,7 +58,7 @@ if __name__ == "__main__":
     runComputer.get_mission_computer_load()
 
 
-# platform 모듈은 운영체제의 이름, 버전 등 시스템 정보를 얻을 수 있다. 아래와 같이 platform 모듈을 사용하는 주요함수가 있다.
+# platform 모듈은 운영체제의 이름, 버전 등 시스템 정보를 얻을 수 있다. 아래와 같이 platform 모듈을 사용하는 주요함수가 있다. (현재 실행 중인 시스템 정보를 파악하는데 유용)
 # platform.system()은 운영체제의 이름을 반환한다.
 # platform.version()은 운영체제의 버전을 반환한다.
 # platform.processor()는 CPU의 정보를 반환한다.
